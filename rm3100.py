@@ -38,7 +38,7 @@ class QRM3100(object):
         self.spi = spi
 
     def measure(self, address):
-        res = self.spi.sreadRegister(address)
+        res = self.spi.readRegister(address)
         return res
 
 if __name__ == "__main__":
