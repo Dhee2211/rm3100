@@ -73,6 +73,7 @@ class Spi_Dev(object):
     def readRegister(self, regAddr):
         """Read the value of the specified register."""
         address = 0x80 | regAddr
+        print(f"Address to be queried {address}")
         resp = self._device.xfer2([address, 0x00]) 
         return resp[1]
 
